@@ -2,6 +2,7 @@ package project1;
 
 import project1.ver08.PhoneBookManager;
 
+import java.util.ConcurrentModificationException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -69,7 +70,7 @@ public class PhoneBookVer08 {
 				System.out.println(e.getMessage());
 			}
 			catch(InputMismatchException e) {
-				e.printStackTrace();
+				System.out.println("문자가 아닌 정수를 입력하세요.");
 				sc.nextLine();
 			}
 			catch(NullPointerException e) {
@@ -83,6 +84,9 @@ public class PhoneBookVer08 {
 				}
 				autoSaver=new AutoSaverT(manager);
 				autoSaver.start();
+			}
+			catch(ConcurrentModificationException e) {
+				
 			}
 		}
 		

@@ -21,4 +21,9 @@ public class PhoneSchoolInfo extends PhoneInfo {
 		System.out.printf("이름:%s\n전화번호:%s\n전공:%s\n학년:%d", name, phoneNumber, subject, grade);
 		System.out.println();
 	}
+	
+	@Override
+	public String toString() {
+		return "이름:"+ name + " 전화번호:" + phoneNumber + " 전공:" + subject + " 학년:" + grade;
+	}
 }
